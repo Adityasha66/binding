@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="text-center">
+        <h1>
+            string interploation
+        </h1>
+        <h3>
+            {{title}}<br>
+            <h4>{{hobbies}}</h4>
+            <br>{{address}}<br>
+        </h3>
+    </div>
+    <div class="text-center">
+        <h1>
+            property binding
+        </h1>
+        <button class="btn btn-success" [disabled]="isDisables">SUBMIT</button>
+    </div>
+    <div class="text-center">
+        <h1>
+            event binding
+        </h1>
+        <button class="btn btn-warning" (click)="clicked()">SUBMIT</button>
+    </div>
+
+    <div class="text-center">
+        <h2>assignement</h2>
+        <br>Change Event: <input type="text" (change)="Done($event)" placeholder="type your name"> <br>
+        <br>Input Event: <input type="text" (input)="Done($event)" placeholder="type your name"> <br>
+        <br>keyup Event: <input type="text" (keyup)="Done($event)" placeholder="type your name"> <br>
+    </div>
+
+    <h1 class="text-center">String interploation</h1>
+    <h3 class="text-center">{{Name}}</h3>
+    <br>
+    <h1 class="text-center">property binding</h1>
+    <h3 [innerText]="Name" class="text-center"></h3>
+</div>
+
+<div class="text-center">
+    <h1>
+        Two way binding
+    </h1>
+    Two way binding <input type="text" placeholder="enter" [(ngModel)]="Great">
+    <h2>{{Great}}</h2>
+</div>
